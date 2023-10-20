@@ -1,0 +1,38 @@
+[
+  {
+    "url": "",
+    "title": "The Marina Torch",
+    "price": 6500000,
+    "ticket": 60000,
+    "yield": 9.25,
+    "days_left": 150,
+    "sold": 75
+  },
+  {
+    "url": "",
+    "title": "HHHR Tower",
+    "price": 3500000,
+    "ticket": 40000,
+    "yield": 19.75,
+    "days_left": 80,
+    "sold": 55
+  },
+  {
+    "url": "",
+    "title": "Ocean peaks",
+    "price": 3700000,
+    "ticket": 50000,
+    "yield": 5.5,
+    "days_left": 132,
+    "sold": 88
+  },
+  {
+    "url": "",
+    "title": "Al Yaqoub Tower",
+    "price": 9500000,
+    "ticket": 80000,
+    "yield": 27.25,
+    "days_left": 42,
+    "sold": 94
+  }
+]

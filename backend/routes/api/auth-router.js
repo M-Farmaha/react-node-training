@@ -9,7 +9,7 @@ import {
   usersLoginSchema,
 } from "../../schemas/users-schemas.js";
 
-// import authenticate from "../../middlewars/authenticate.js";
+import authenticate from "../../middlewars/authenticate.js";
 
 const authRouter = express.Router();
 
@@ -25,6 +25,6 @@ authRouter.post(
   authControllers.login
 );
 
-// authRouter.post("/logout", authenticate, authControllers.logout);
+authRouter.post("/logout", authenticate, authControllers.logout);
 
 export default authRouter;
