@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/users", authRouter);
+app.use("/", authRouter);
 app.use("/deals", dealsRouter);
 
 app.use((req, res) => {
