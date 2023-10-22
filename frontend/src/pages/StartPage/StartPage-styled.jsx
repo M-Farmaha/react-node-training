@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import StartPageBackground from "./StartPageBackground.jpg";
 
-import { Link } from "react-router-dom";
-
 export const Background = styled.div`
   color: var(--primary-black-color);
   background-color: var(--primary-black-color);
