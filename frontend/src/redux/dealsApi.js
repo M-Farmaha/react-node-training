@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const dealsApi = createApi({
   reducerPath: "deals",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:7373",
+    baseUrl: "https://react-node-training.onrender.com",
   }),
 
   endpoints: (builder) => ({
