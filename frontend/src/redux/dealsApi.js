@@ -11,7 +11,7 @@ export const dealsApi = createApi({
       query: token => ({
         url: "/deals",
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       }),
     }),
