@@ -9,7 +9,7 @@ import {
 import { getToken } from "../../redux/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { ButtonAddLoader } from "../Loaders/Loaders";
+import { ButtonLoader } from "../Loaders/Loaders";
 import { useLogoutUserMutation } from "../../redux/authApi";
 import { setToken } from "../../redux/slice";
 
@@ -40,7 +40,7 @@ export const AppBar = () => {
               type="button"
               onClick={handleLogOutClick}
             >
-              {!isLoading ? "Log Out" : <ButtonAddLoader />}
+              {!isLoading ? "Log Out" : <ButtonLoader />}
             </NavButton>
           ) : (
             <NavList>

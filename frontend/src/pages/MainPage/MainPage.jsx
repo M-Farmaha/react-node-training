@@ -6,10 +6,7 @@ import { DealsItem } from "../../components/DealsItem/DealsItem";
 
 export const MainPage = () => {
   const token = useSelector(getToken);
-  const { data, isLoading, isError } = useGetDealsQuery(token);
-  console.log(data);
-  console.log(isLoading);
-  console.log(isError);
+  const { data } = useGetDealsQuery(token);
   return (
     <Section>
       <Title>Open Deals</Title>

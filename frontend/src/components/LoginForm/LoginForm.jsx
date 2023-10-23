@@ -10,7 +10,7 @@ import {
   ShowPasswordIcon,
   LinkStyled,
 } from "./LoginForm-styled";
-import { ButtonAddLoader } from "../Loaders/Loaders";
+import { ButtonLoader } from "../Loaders/Loaders";
 import { useDispatch } from "react-redux";
 import { useLoginUserMutation } from "../../redux/authApi";
 import { setToken } from "../../redux/slice";
@@ -81,7 +81,7 @@ export const LoginForm = () => {
       </LinkStyled>
 
       <Button type="submit" disabled={isLoading || !email || !password}>
-        {!isLoading ? "Sign In" : <ButtonAddLoader />}
+        {!isLoading ? "Sign In" : <ButtonLoader />}
       </Button>
     </Form>
   );

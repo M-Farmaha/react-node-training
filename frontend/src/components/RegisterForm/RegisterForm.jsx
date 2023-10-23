@@ -9,7 +9,7 @@ import {
   ShowPasswordIcon,
 } from "./RegisterForm-styled";
 
-import { ButtonAddLoader } from "../Loaders/Loaders";
+import { ButtonLoader } from "../Loaders/Loaders";
 import { useCreateUserMutation } from "../../redux/authApi";
 import { useDispatch } from "react-redux";
 import { setToken } from "../../redux/slice";
@@ -96,7 +96,7 @@ export const RegisterForm = () => {
         type="submit"
         disabled={isLoading || !name || !email || !password}
       >
-        {!isLoading ? "Sign Up" : <ButtonAddLoader />}
+        {!isLoading ? "Sign Up" : <ButtonLoader />}
       </Button>
     </Form>
   );
