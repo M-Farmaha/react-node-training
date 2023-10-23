@@ -66,6 +66,10 @@ export const NavLinkStyled = styled(NavLink)`
     color: var(--primary-white-color);
     cursor: default;
   }
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
 `;
 
 export const NavButton = styled.button`
