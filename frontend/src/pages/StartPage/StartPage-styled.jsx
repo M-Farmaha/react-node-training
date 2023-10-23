@@ -56,14 +56,13 @@ export const SubTitle = styled.p`
 `;
 
 export const Button = styled.button`
-background-color: transparent;
+  background-color: transparent;
   color: var(--primary-white-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  
 
-  padding:  10px 24px;
+  padding: 10px 24px;
 
   border-radius: 8px;
   border: 1px solid var(--primary-white-color);

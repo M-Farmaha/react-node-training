@@ -50,7 +50,7 @@ export const DescriptionList = styled.ul`
 `;
 
 export const DescriptionItem = styled.li`
-width: 150px;
+  width: 150px;
 `;
 
 export const DescriptionText = styled.span`

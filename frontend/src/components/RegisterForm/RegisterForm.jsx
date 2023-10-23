@@ -24,7 +24,6 @@ export const RegisterForm = () => {
   const [createNewUser] = useCreateUserMutation();
   const dispatch = useDispatch();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setisLoading(true);
