@@ -13,11 +13,17 @@ Backend:
 -mongoBD/mongoose
 
 ## Pages
+- Start page
+![Start page](./screenshots/StartPage.jpg)
 
-![Start page](./StartPage.jpg)
-![Auth page (register/login)](./AuthPage.jpg)
+- Auth page (register/login)
+![Auth page](./screenshots/AuthPage.jpg)
+
 - Main page
+![Main page](./screenshots/MainPage.jpg)
+
 - Error page (for any non-existent route)
+![ErrorPage](./screenshots/ErrorPage.jpg)
 
 ## Contributing
 
