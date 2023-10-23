@@ -22,7 +22,7 @@ export const NavWrap = styled.nav`
   height: 100%;
   display: flex;
   justify-content: end;
-  align-items: baseline;
+  align-items: center;
   gap: 20px;
 `;
 
@@ -51,6 +51,40 @@ export const NavLinkStyled = styled(NavLink)`
   font-style: normal;
   font-weight: 700;
   line-height: 1.38;
+
+  transition: var(--main-transition);
+
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+  }
+  &.active {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+    cursor: default;
+  }
+`;
+
+export const NavButton = styled.button`
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 11px;
+
+  border-radius: 8px;
+  border: 1px solid var(--accent-color);
+
+  text-align: center;
+  font-family: Merriweather;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.38;
+
+  outline: none;
+  background-color: transparent;
 
   transition: var(--main-transition);
 

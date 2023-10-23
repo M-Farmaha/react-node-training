@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-// import { useDispatch } from "react-redux";
-// import { useLoginUserMutation } from "redux/authApi";
-// import { setToken } from "redux/slice";
-
 import {
   Form,
   Label,
@@ -15,6 +11,9 @@ import {
   LinkStyled,
 } from "./LoginForm-styled";
 import { ButtonAddLoader } from "../Loaders/Loaders";
+import { useDispatch } from "react-redux";
+import { useLoginUserMutation } from "../../redux/authApi";
+import { setToken } from "../../redux/slice";
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -22,15 +21,17 @@ export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setisLoading] = useState(false);
 
-  // const [loginUser] = useLoginUserMutation();
-  // const dispatch = useDispatch();
+  const [loginUser] = useLoginUserMutation();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setisLoading(true);
     try {
+      const { token } = await loginUser({ email, password }).unwrap();
+      dispatch(setToken(token));
     } catch (error) {
-      console.log(`Access denied`);
+      alert(error.data.message);
     }
     setisLoading(false);
   };
@@ -61,8 +62,8 @@ export const LoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           id={"password"}
-          title="Min 7, max 20 latin letters and figures"
-          pattern="^[a-zA-Z0-9]{7,20}$"
+          title="Min 6, max 20 latin letters and figures"
+          pattern="^[a-zA-Z0-9]{6,20}$"
           required
           autoComplete="off"
         />
@@ -75,13 +76,13 @@ export const LoginForm = () => {
         </SecureButton>
       </div>
 
-      <LinkStyled style={{ marginBottom: "30px", marginLeft: "auto" }}>Forgot password?</LinkStyled>
+      <LinkStyled style={{ marginBottom: "30px", marginLeft: "auto" }}>
+        Forgot password?
+      </LinkStyled>
 
       <Button type="submit" disabled={isLoading || !email || !password}>
         {!isLoading ? "Sign In" : <ButtonAddLoader />}
       </Button>
-
-      
     </Form>
   );
 };

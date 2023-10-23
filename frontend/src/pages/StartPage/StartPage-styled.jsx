@@ -3,7 +3,7 @@ import StartPageBackground from "./StartPageBackground.jpg";
 
 export const Background = styled.div`
   color: var(--primary-black-color);
-  background-color: var(--primary-black-color);
+  background-color: var(--primary-color);
   background-image: linear-gradient(
       to right,
       rgba(23, 34, 52, 0.6),

@@ -1,9 +1,4 @@
 import { useState } from "react";
-
-// import { useDispatch } from "react-redux";
-// import { useLoginUserMutation } from "redux/authApi";
-// import { setToken } from "redux/slice";
-
 import {
   Form,
   Label,
@@ -13,7 +8,11 @@ import {
   HidePasswordIcon,
   ShowPasswordIcon,
 } from "./RegisterForm-styled";
+
 import { ButtonAddLoader } from "../Loaders/Loaders";
+import { useCreateUserMutation } from "../../redux/authApi";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../redux/slice";
 
 export const RegisterForm = () => {
   const [name, setName] = useState("");
@@ -22,15 +21,18 @@ export const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setisLoading] = useState(false);
 
-  // const [loginUser] = useLoginUserMutation();
-  // const dispatch = useDispatch();
+  const [createNewUser] = useCreateUserMutation();
+  const dispatch = useDispatch();
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setisLoading(true);
     try {
+      const { token } = await createNewUser({ name, email, password }).unwrap();
+      dispatch(setToken(token));
     } catch (error) {
-      console.log(`Access denied`);
+      alert(error.data.message);
     }
     setisLoading(false);
   };
@@ -90,7 +92,10 @@ export const RegisterForm = () => {
         </SecureButton>
       </div>
 
-      <Button type="submit" disabled={isLoading || !name || !email || !password}>
+      <Button
+        type="submit"
+        disabled={isLoading || !name || !email || !password}
+      >
         {!isLoading ? "Sign Up" : <ButtonAddLoader />}
       </Button>
     </Form>

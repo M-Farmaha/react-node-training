@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Background = styled.div`
-  background-color: var(--primary-black-color);
+  background-color: var(--primary-color);
   background-image: url(${AuthPageBackground});
   background-size: cover;
   background-position: center top;
