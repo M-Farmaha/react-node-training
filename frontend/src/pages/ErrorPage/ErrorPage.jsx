@@ -1,10 +1,10 @@
-import { ErrorTitle, ErrorWrap } from "./ErrorPage-styled";
+import { ErrorSubTitle, ErrorTitle, ErrorWrap } from "./ErrorPage-styled";
 
 export const ErrorPage = () => {
   return (
     <ErrorWrap>
       <ErrorTitle>Error 404</ErrorTitle>
-      <p>Wrong path. Nothing exists for your request</p>
+      <ErrorSubTitle>Wrong path. Nothing exists for your request</ErrorSubTitle>
     </ErrorWrap>
   );
 };

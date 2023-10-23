@@ -7,12 +7,17 @@ export const ErrorWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 export const ErrorTitle = styled.p`
   font-weight: 700;
   font-size: 50px;
   color: var(--accent-color);
+`;
 
-  transition: var(--main-transition);
+export const ErrorSubTitle = styled.p`
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--primary-color);
 `;

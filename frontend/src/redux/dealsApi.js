@@ -8,7 +8,7 @@ export const dealsApi = createApi({
 
   endpoints: (builder) => ({
     getDeals: builder.query({
-      query: (token) => ({
+      query: token => ({
         url: "/deals",
         headers: {
           Authorization: token,

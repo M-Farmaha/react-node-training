@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
   height: 80px;
-  min-width: 490px;
+  min-width: 450px;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,18 +12,21 @@ export const Header = styled.header`
   background-color: var(--primary-color);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.06),
     0px 2px 10px 0px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: end;
-
-  padding: 0px 80px;
 `;
 
 export const NavWrap = styled.nav`
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0px 80px;
+  display: flex;
+  justify-content: end;
+
   height: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 20px;
 `;
 
 export const NavList = styled.ul`
