@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-node-training/static/css/main.28671bea.css",
+    "main.js": "/react-node-training/static/js/main.0072601d.js",
+    "static/media/StartPageBackground.jpg": "/react-node-training/static/media/StartPageBackground.220465c3d091a5611c66.jpg",
+    "static/media/AuthPageBackground.jpg": "/react-node-training/static/media/AuthPageBackground.1073974ee1637df0aaae.jpg",
+    "index.html": "/react-node-training/index.html",
+    "main.28671bea.css.map": "/react-node-training/static/css/main.28671bea.css.map",
+    "main.0072601d.js.map": "/react-node-training/static/js/main.0072601d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28671bea.css",
+    "static/js/main.0072601d.js"
+  ]
+}
